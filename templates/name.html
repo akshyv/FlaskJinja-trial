@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block content %}
+<head>
+  <title>Name Form</title>
+</head>
+{% for message in get_flashed_messages() %}
+  <div class="alert alert-warning alert dismissable fade show" role="alert">
+    {{ message }}
+    <button type="buton" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  
+{% endfor %}
+{% if name %}
+<h1>Enna {{name}} Eppudi iruka ?</h1>
+</br>
+<img src="{{url_for('static', filename='image/NorthPeak.png')}}"
+width=1100>
+</br>
+<p id="demo">Inga Click pannatha</p>
+<script src="{{ url_for('static', filename='js/myfile.js') }}">  
+</script>
+{% else %}
+<h1>Ama periya Desingu Raja name ah kudra </h1>
+</br></br>
+
+<form method="POST">
+  {{ form.hidden_tag() }}
+  {{ form.name.label(
+    class="form-label"
+  ) }}
+  {{ form.name(
+    class="form-control"
+  ) }}
+  </br>
+  {{ form.submit(
+    class="btn btn-secondary"
+  ) }}
+</form>
+{% endif %} {% endblock %}%

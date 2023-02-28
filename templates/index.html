@@ -1,0 +1,62 @@
+<html>
+  {% extends 'base.html' %} {% block content %}
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Hi This is Index page</h1>
+    </br>
+    </br>
+    <h2>Jinja List of Features</h2>
+    <ol>
+      <li>{{safe1 | safe}}</li>
+      <li>{{capitalize1| capitalize}}</li>
+      <li>{{lower1 | lower}}</li>
+      <li>{{upper1 | upper}}</li>
+      <li>{{title1 | title}}</li>
+      <li>{{trim1 | trim}}</li>
+      <li>{{striptags1 | striptags}}</li>
+    </ol>
+    </br>
+    <h2>Fields Available in WTForms</h2>
+    <ul>
+      <li>BooleanField</li>
+      <li>DateField</li>
+      <li>DateTimeField</li>
+      <li>DecimalField</li>
+      <li>FileField</li>
+      <li>HiddenField</li>
+      <li>MultipleField</li>
+      <li>FieldList</li>
+      <li>FloatField</li>
+      <li>FormField</li>
+      <li>IntegerField</li>
+      <li>PasswordField</li>
+      <li>RadioField</li>
+      <li>SelectField</li>
+      <li>SelectMultipleField</li>
+      <li>SubmitField</li>
+      <li>StringField</li>
+      <li>TextAreaField</li>
+    </ul>
+  </br>
+  <h2>Validators Available in WTForms</h2>
+    <ol>
+      <li>DataRequired</li>
+      <li>Email</li>
+      <li>EqualTo</li>
+      <li>InputRequired</li>
+      <li>IPAddress</li>
+      <li>Length</li>
+      <li>MacAddress</li>
+      <li>NumberRange</li>
+      <li>Optional</li>
+      <li>Regexp</li>
+      <li>URL</li>
+      <li>UUID</li>
+      <li>AnyOf</li>
+      <li>NoneOf</li>
+    </ol>
+  </body>
+  {%endblock%}
+</html>

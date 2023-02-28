@@ -1,0 +1,20 @@
+<html>
+    {% extends 'base.html' %}
+    {% block content %}
+  <head>
+    <title>{{user_name | capitalize}}</title>
+  </head>
+  <body>
+    <div>
+      <h1>Ennada sound {{user_name |capitalize}}</h1>
+      <p>Water {{user_name|capitalize}} ah marita</p>
+    </div>
+    <div>
+        <i>Unaku Enna Milkshake venu</i></br>
+        {% for flavour in flavours%}
+            {{flavour}}</br>
+        {% endfor %}
+    </div>
+  </body>
+  {%endblock%}
+</html>
